@@ -11,14 +11,12 @@ import {
   Text,
   View
 } from 'react-native';
-
+import { createStackNavigator } from 'react-navigation';
 import HomeView from './views/HomeView'
+import HomeScreen from './views/HomeScreen'
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <HomeView/>
-    );
+export default createStackNavigator({
+  Home : {
+    screen : HomeScreen
   }
-}
+});
